@@ -10,14 +10,10 @@ import { sensorSimulator } from "../lib/sensorSimulator";
 import { inferenceService } from "../lib/inferenceService";
 import { simulatePush } from "../services/emotionService";
 import FaceEmotionTracker from "../components/FaceEmotionTracker";
-import Chatbot from "../components/Chatbot";
+import Chatbot from "../components/ChatBot";
 import { Sparkles, Activity, Zap, Moon } from "lucide-react";
 import { motion, AnimatePresence, useSpring, useMotionValue, useTransform } from "framer-motion";
 
-/* DashboardPro — Chatbot wired in (MindCare)
-   - Chatbot imported and rendered via chatOpen state
-   - Also listens for global 'open-chat-panel' event for Sidebar integration
-*/
 
 const clamp = (v, a = -10, b = 10) => Math.max(a, Math.min(b, v));
 const fmt = (n, f = 2) => (Number.isFinite(n) ? Number(n).toFixed(f) : "—");
